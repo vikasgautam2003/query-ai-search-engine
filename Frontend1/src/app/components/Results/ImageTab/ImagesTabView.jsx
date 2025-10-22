@@ -56,7 +56,7 @@ export const ImagesTabView = ({ initialQuery, onBackToAnswer }) => {
 
   return (
     <div className="p-4 bg-gray-900 text-white min-h-screen">
-      {/* Header */}
+
       <div className="flex items-center justify-between mb-6">
         <button
           onClick={onBackToAnswer}

@@ -6,13 +6,15 @@
 import React, { useState, useCallback } from 'react';
 import { AnswerTabView } from './WebResults/MainWebResults';
 import { ImagesTabView } from './ImageTab/ImagesTabView';
+import { VideosTabView } from './VideosTab/VideosTabView';
 import { SourcesTabView } from './SourcesTab/SourcesTabView';
 import { StepsTabView } from './StepsTab/StepsTabView';
 import { BottomChatInput } from './BottomChatInput';
 
+
 export const ResultsView = ({ query, data, onReset, onNewSearch }) => {
   const [activeTab, setActiveTab] = useState('Answer');
-  const { answer, sources, images, relatedQuestions } = data;
+  const { answer, sources, images, relatedQuestions, videos} = data;
 
   const TabButton = ({ label }) => {
     const isActive = activeTab === label;
@@ -43,10 +45,10 @@ export const ResultsView = ({ query, data, onReset, onNewSearch }) => {
 
 
   return (
-    <div className="w-full max-w-8xl mx-auto p-6 md:p-10 bg-gray-900 rounded-xl shadow-2xl text-white relative pb-28">
+    <div className="w-full max-w-8xl mx-auto md:p-5 bg-gray-900 rounded-xl shadow-2xl text-white relative  pr-5 pl-5">
 
       <h1
-        className="text-xl md:text-3xl font-extrabold mb-8 text-center bg-clip-text text-white"
+        className="text-xl md:text-3xl font-extrabold mb-8 text-center bg-clip-text text-white pt-10"
         style={{
           fontFamily: "'Inter', sans-serif"
         }}
@@ -58,11 +60,12 @@ export const ResultsView = ({ query, data, onReset, onNewSearch }) => {
       <div className="flex justify-center space-x-10 border-b border-gray-700 mb-8">
         <TabButton label="Answer" />
         <TabButton label="Images" />
+        <TabButton label="Videos" />
         <TabButton label="Sources" />
         <TabButton label="Steps" />
       </div>
 
-      {/* Content */}
+     
       <div className="mt-6 space-y-8">
         {activeTab === 'Answer' && (
           <div className="prose prose-invert max-w-none">
@@ -81,6 +84,15 @@ export const ResultsView = ({ query, data, onReset, onNewSearch }) => {
           <div className="w-full px-4">
     <ImagesTabView initialQuery={query} onBackToAnswer={() => setActiveTab('Answer')} />
   </div>
+
+        )}
+
+
+        {activeTab === 'Videos' && (
+          <div className="w-full px-4">
+            <VideosTabView videos={videos} />
+          </div>
+
         )}
 
         {activeTab === 'Sources' && (

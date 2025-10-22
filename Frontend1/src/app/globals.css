@@ -346,61 +346,6 @@ body {
 
 
 
-.qai-home {
-    background: linear-gradient(135deg, #0b0c1a 0%, #1c1f3a 50%, #0f1120 100%);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background-size: 400% 400%;
-    animation: qai-bg-pulse 15s ease infinite;
-}
-
-.qai-bg-input {
-    background: linear-gradient(135deg, rgba(11, 12, 26, 0.95), rgba(28, 31, 58, 0.95));
-}
-
-.qai-bg-results {
-    background: linear-gradient(135deg, rgba(20, 20, 35, 0.95), rgba(38, 41, 65, 0.95));
-}
-
-@keyframes qai-bg-pulse {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
-.qai-home-input {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.qai-home-title h1 {
-    font-weight: 900;
-}
-
-.qai-gradient-text {
-    background: linear-gradient(90deg, #00f0ff, #8a2be2, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.qai-error {
-    font-size: 1rem;
-}
-
-.qai-results-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-
-
 
 
 

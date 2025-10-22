@@ -24,7 +24,7 @@ export const BottomChatInput = ({ onSend }) => {
   };
 
   return (
-    <div className="sticky bottom-0 w-full bg-gray-900 p-4 flex items-center border-t border-gray-700 z-10">
+    <div className="sticky bottom-0 w-full bg-gray-900 p-4 flex items-center border-t h-[100px] border-gray-700 z-10">
       <input
         type="text"
         placeholder="Type your question..."
