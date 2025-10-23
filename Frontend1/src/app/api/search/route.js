@@ -162,7 +162,7 @@ export async function POST(request) {
       favicon: item.favicon
     }));
 
-    const images = (serpImageData.images_results || []).slice(0, 6).map(item => ({
+    const images = (serpImageData.images_results || []).slice(0, 10).map(item => ({
       imageUrl: `/api/image-proxy?url=${encodeURIComponent(item.original)}`,
       thumbnailUrl: `/api/image-proxy?url=${encodeURIComponent(item.thumbnail)}`,
       link: item.link || "",
@@ -171,8 +171,8 @@ export async function POST(request) {
 
     const relatedQuestions = (serpData.related_questions || []).map(item => item.question).slice(0, 5);
 
-    // ✅ Add video processing from your original backend
-    const videos = (videoData.video_results || []).slice(0, 10).map(video => ({
+
+    const videos = (videoData.video_results || []).slice(0, 20).map(video => ({
       title: video.title,
       link: video.link,
       thumbnailUrl: video.thumbnail || video.thumbnailUrl,
