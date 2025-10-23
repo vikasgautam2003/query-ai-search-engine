@@ -24,13 +24,13 @@ export const AnswerTabView = ({ answer, sources, images, relatedQuestions, onNew
 
   return (
     <div className="space-y-8">
-      {/* Sources */}
+
       <QuickSources sources={sources} />
 
-      {/* Image Gallery */}
+ 
       <ImageGallery images={images} />
 
-      {/* Answer Text */}
+  
       <div className="bg-gray-900 p-6 rounded-xl shadow-lg">
         <h2 className="text-2xl font-bold text-white mb-4">{query}
         </h2>

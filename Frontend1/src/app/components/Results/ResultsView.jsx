@@ -117,7 +117,7 @@ export const ResultsView = ({ query, data, onReset, onNewSearch }) => {
        
 
 
-      {/* Fixed Bottom Chat Input */}
+      
        <div className="sticky bottom-0 bg-gray-800 border-t border-gray-700 z-10 ">
         <BottomChatInput onSend={handleNewSearch} />
       </div>

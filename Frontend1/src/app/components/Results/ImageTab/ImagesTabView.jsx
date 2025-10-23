@@ -287,7 +287,7 @@ export const ImagesTabView = ({ initialQuery, onBackToAnswer }) => {
 
       {images.length > 0 && (
         <>
-          {/* Image Modal */}
+        
           {isModalOpen && (
             <ImageModal
               images={images}
